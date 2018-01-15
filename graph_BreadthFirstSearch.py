@@ -24,7 +24,7 @@ def breadthFirstSearch(root, val):
                 if neighbor.val == val:
                     s= "found " + val
                 queue.put(neighbor)
-    return s          
+    return s
 
 if __name__ == "__main__":
     node1 = GraphNode("a")
