@@ -4,9 +4,13 @@ class GraphNode:
         self.val = value
         self.neighbors = None
         self.visited = False
+        self.distance = None
         
     def neigbhors(self, neighbors):
         self.neighbors = neighbors
+
+    def distances(self, distance):
+        self.distance = distance
 
 def breadthFirstSearch(root, val):
     s = None
@@ -33,6 +37,8 @@ if __name__ == "__main__":
     node4 = GraphNode("d")
     node5 = GraphNode("e")
 
+    node2.distances(7)
+    node4.distances(4)
     node1.neigbhors([node2,node4])
     node2.neigbhors([node3,node5])
     node3.neigbhors([node2,node4,node5])
